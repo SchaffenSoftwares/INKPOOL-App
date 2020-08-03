@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "370379629417",
+    "firebase_url": "https://inkpool3.firebaseio.com",
+    "project_id": "inkpool3",
+    "storage_bucket": "inkpool3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370379629417:android:7a88795578af1dc55213f8",
+        "android_client_info": {
+          "package_name": "com.schaffen.inkpool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "370379629417-67pl7u98js49btu4eek940oukf856r09.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtl5vz2SFT3hP788zy7Mvm6n_wfpFrNaU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "370379629417-67pl7u98js49btu4eek940oukf856r09.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

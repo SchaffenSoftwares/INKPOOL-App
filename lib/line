@@ -1,0 +1,8 @@
+Padding(
+              padding: const EdgeInsets.only(right: 170.0, top: 11.0),
+              child: Container(
+                  width: 2.0,
+                  height: 50,
+                  color: Colors.blueGrey[200]
+              ),
+            ),
