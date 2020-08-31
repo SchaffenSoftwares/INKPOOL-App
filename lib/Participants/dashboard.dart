@@ -133,6 +133,8 @@ class Dashboard extends StatelessWidget
                   Padding(
                     padding: const EdgeInsets.only(top: 30.0),
                     child: RaisedButton(
+                      onPressed: ()
+                      {},
                       elevation: 10.0,
                       color: Colors.white,
                       shape: RoundedRectangleBorder(

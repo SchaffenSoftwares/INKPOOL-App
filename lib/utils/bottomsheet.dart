@@ -5,32 +5,26 @@ import 'package:inkpool/Participants/dashboard.dart';
 import 'package:inkpool/Participants/escort.dart';
 import 'package:inkpool/Participants/schaffenabout.dart';
 import 'package:inkpool/Participants/timeline.dart';
+import 'package:inkpool/services/helper.dart';
 import 'package:inkpool/services/userdata.dart';
+import 'package:inkpool/wrapper.dart';
 
-class BottomSheetIP extends StatelessWidget
-{
-
+class BottomSheetIP extends StatelessWidget {
   UserData userData = UserData();
   int val;
 
-
-  Widget build(BuildContext context)
-  {
-
-
+  Widget build(BuildContext context) {
     return IconButton(
       icon: Icon(Icons.dehaze),
       color: Colors.blueGrey[200],
-      onPressed: (){
+      onPressed: () {
         showModalBottomSheet(
             backgroundColor: Colors.blueGrey[700],
             elevation: 10.0,
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0)
-            ),
+                borderRadius: BorderRadius.circular(10.0)),
             context: context,
-            builder: (context)
-            {
+            builder: (context) {
               return ListView(
                 children: <Widget>[
                   ListTile(
@@ -39,15 +33,16 @@ class BottomSheetIP extends StatelessWidget
                       style: TextStyle(
                           fontFamily: 'Merriweather',
                           fontSize: 18,
-                          color: Colors.blueGrey[200]
-                      ),
+                          color: Colors.blueGrey[200]),
                     ),
                     trailing: Icon(
                       FontAwesomeIcons.dashcube,
                       color: Colors.blueGrey[200],
                     ),
-                    onTap: (){
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => Dashboard(),));
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => Dashboard(),
+                      ));
                     },
                   ),
                   ListTile(
@@ -56,15 +51,16 @@ class BottomSheetIP extends StatelessWidget
                       style: TextStyle(
                           fontFamily: 'Merriweather',
                           fontSize: 18,
-                        color: Colors.blueGrey[200]
-                      ),
+                          color: Colors.blueGrey[200]),
                     ),
                     trailing: Icon(
-                        FontAwesomeIcons.calendarTimes,
+                      FontAwesomeIcons.calendarTimes,
                       color: Colors.blueGrey[200],
                     ),
-                    onTap: (){
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => Timeline(),));
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => Timeline(),
+                      ));
                     },
                   ),
                   ListTile(
@@ -73,15 +69,16 @@ class BottomSheetIP extends StatelessWidget
                       style: TextStyle(
                           fontFamily: 'Merriweather',
                           fontSize: 18,
-                          color: Colors.blueGrey[200]
-                      ),
+                          color: Colors.blueGrey[200]),
                     ),
                     trailing: Icon(
                       FontAwesomeIcons.questionCircle,
                       color: Colors.blueGrey[200],
                     ),
-                    onTap: (){
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => About(),));
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => About(),
+                      ));
                     },
                   ),
                   ListTile(
@@ -90,15 +87,16 @@ class BottomSheetIP extends StatelessWidget
                       style: TextStyle(
                           fontFamily: 'Merriweather',
                           fontSize: 18,
-                          color: Colors.blueGrey[200]
-                      ),
+                          color: Colors.blueGrey[200]),
                     ),
                     trailing: Icon(
                       FontAwesomeIcons.solidArrowAltCircleUp,
                       color: Colors.blueGrey[200],
                     ),
-                    onTap: (){
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => About(),));
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => About(),
+                      ));
                     },
                   ),
                   ListTile(
@@ -107,15 +105,16 @@ class BottomSheetIP extends StatelessWidget
                       style: TextStyle(
                           fontFamily: 'Merriweather',
                           fontSize: 18,
-                          color: Colors.blueGrey[200]
-                      ),
+                          color: Colors.blueGrey[200]),
                     ),
                     trailing: Icon(
                       FontAwesomeIcons.peopleArrows,
                       color: Colors.blueGrey[200],
                     ),
-                    onTap: (){
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => About(),));
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => About(),
+                      ));
                     },
                   ),
                   ListTile(
@@ -124,15 +123,16 @@ class BottomSheetIP extends StatelessWidget
                       style: TextStyle(
                           fontFamily: 'Merriweather',
                           fontSize: 18,
-                          color: Colors.blueGrey[200]
-                      ),
+                          color: Colors.blueGrey[200]),
                     ),
                     trailing: Icon(
                       FontAwesomeIcons.gifts,
                       color: Colors.blueGrey[200],
                     ),
-                    onTap: (){
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => About(),));
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => About(),
+                      ));
                     },
                   ),
                   ListTile(
@@ -141,15 +141,16 @@ class BottomSheetIP extends StatelessWidget
                       style: TextStyle(
                           fontFamily: 'Merriweather',
                           fontSize: 18,
-                          color: Colors.blueGrey[200]
-                      ),
+                          color: Colors.blueGrey[200]),
                     ),
                     trailing: Icon(
                       FontAwesomeIcons.personBooth,
                       color: Colors.blueGrey[200],
                     ),
-                    onTap: (){
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => Escort(),));
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => Escort(),
+                      ));
                     },
                   ),
                   ListTile(
@@ -158,21 +159,40 @@ class BottomSheetIP extends StatelessWidget
                       style: TextStyle(
                           fontFamily: 'Merriweather',
                           fontSize: 18,
-                          color: Colors.blueGrey[200]
-                      ),
+                          color: Colors.blueGrey[200]),
                     ),
                     trailing: Icon(
                       FontAwesomeIcons.bookmark,
                       color: Colors.blueGrey[200],
                     ),
-                    onTap: (){
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => SchaffenAbout(),));
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => SchaffenAbout(),
+                      ));
+                    },
+                  ),
+                  ListTile(
+                    title: Text(
+                      "Sign Out",
+                      style: TextStyle(
+                          fontFamily: 'Merriweather',
+                          fontSize: 18,
+                          color: Colors.blueGrey[200]),
+                    ),
+                    trailing: Icon(
+                      FontAwesomeIcons.doorOpen,
+                      color: Colors.blueGrey[200],
+                    ),
+                    onTap: () async{
+                      await HelperFunc.saveUserloggedIn(false);
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => Wrapper(),
+                      ));
                     },
                   ),
                 ],
               );
-            }
-        );
+            });
       },
     );
   }

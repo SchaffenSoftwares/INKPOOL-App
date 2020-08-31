@@ -1,0 +1,3 @@
+
+  String username = "";
+  bool isLoggedIn;
