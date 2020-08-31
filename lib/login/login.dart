@@ -4,10 +4,13 @@ import 'package:flutter/services.dart';
 import 'package:inkpool/Participants/dashboard.dart';
 import 'package:inkpool/Participants/timeline.dart';
 import 'package:inkpool/services/auth_service.dart';
+import 'package:inkpool/services/database.dart';
+import 'package:inkpool/services/helper.dart';
 import 'package:inkpool/services/userdata.dart';
+import 'package:inkpool/utils/common.dart';
+import 'package:inkpool/wrapper.dart';
 
-void main()
-{
+void main() {
   runApp(MaterialApp(
     theme: ThemeData.dark(),
   ));
@@ -27,9 +30,9 @@ class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
   final _formKey2 = GlobalKey<FormState>();
 
-  String _email = "";
+  String username = "";
   String _password = "";
-  String error= "";
+  String error = "";
 
   Widget _buildEmailTF() {
     return Form(
@@ -38,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            'Email',
+            'Username',
           ),
           SizedBox(height: 10.0),
           Container(
@@ -46,11 +49,10 @@ class _LoginScreenState extends State<LoginScreen> {
             height: 60.0,
             child: TextFormField(
               keyboardType: TextInputType.emailAddress,
-              validator: (val) => val.isEmpty ? 'Enter an Email' : null,
-              onChanged: (val)
-              {
+              validator: (val) => val.isEmpty ? 'Enter your Username' : null,
+              onChanged: (val) {
                 setState(() {
-                  _email = val;
+                  username = val;
                 });
               },
               style: TextStyle(
@@ -88,8 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
             height: 60.0,
             child: TextFormField(
               validator: (val) => val.isEmpty ? 'Enter a Password' : null,
-              onChanged: (val)
-              {
+              onChanged: (val) {
                 setState(() {
                   _password = val;
                 });
@@ -115,7 +116,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget _buildForgotPasswordBtn() {
+  /*Widget _buildForgotPasswordBtn() {
     return Container(
       alignment: Alignment.centerRight,
       child: FlatButton(
@@ -126,7 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
       ),
     );
-  }
+  }*/
 
   Widget _buildRememberMeCheckbox() {
     return Container(
@@ -160,8 +161,8 @@ class _LoginScreenState extends State<LoginScreen> {
       width: double.infinity,
       child: RaisedButton(
         elevation: 5.0,
-        onPressed: ()async{
-          if(_formKey.currentState.validate() && _formKey2.currentState.validate()){
+        onPressed: () async {
+          /*if(_formKey.currentState.validate() && _formKey2.currentState.validate()){
             dynamic result = await _auth.signInWithEmailAndPassword(_email, _password);
             if(result == null){
               setState(() {
@@ -175,6 +176,23 @@ class _LoginScreenState extends State<LoginScreen> {
                 UserData(index: password);
                 Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Dashboard(),));
               }
+          }*/
+          if (await Database().login(username, _password)) {
+            setState(() {
+              error = 'Wrong Credentials';
+            });
+          } else {
+            await HelperFunc.saveUsername(username);
+            await HelperFunc.saveUserloggedIn(true);
+            isLoggedIn = await HelperFunc.getUserloggedIn();
+            setState(() {});
+            print(username +
+                ' ' +
+                isLoggedIn.toString()
+                );
+            Navigator.of(context).pushReplacement(MaterialPageRoute(
+              builder: (context) => Wrapper(),
+            ));
           }
         },
         padding: EdgeInsets.all(15.0),
@@ -196,8 +214,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget _buildIcon()
-  {
+  Widget _buildIcon() {
     return Padding(
       padding: const EdgeInsets.only(right: 10.0),
       child: Container(
@@ -207,8 +224,6 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
-
-
 
   @override
   Widget build(BuildContext context) {
