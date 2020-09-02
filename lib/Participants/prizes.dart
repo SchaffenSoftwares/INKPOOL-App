@@ -115,6 +115,7 @@ class Prizes extends StatelessWidget
                       Padding(
                         padding: const EdgeInsets.only(left: 50.0, right: 50, top: 20),
                         child: RaisedButton(
+                           onPressed: (){},
                           color: Colors.white,
                           child: Column(
                             children: [
@@ -148,6 +149,7 @@ class Prizes extends StatelessWidget
                       Padding(
                         padding: const EdgeInsets.only(left: 50.0, right: 50, top: 20),
                         child: RaisedButton(
+                           onPressed: (){},
                             color: Colors.white,
                             child: Column(
                               children: [
@@ -181,6 +183,7 @@ class Prizes extends StatelessWidget
                       Padding(
                         padding: const EdgeInsets.only(left: 50.0, right: 50, top: 20),
                         child: RaisedButton(
+                           onPressed: (){},
                             color: Colors.white,
                             child: Column(
                               children: [

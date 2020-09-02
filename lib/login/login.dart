@@ -66,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Icons.email,
                   color: Colors.white,
                 ),
-                hintText: 'Enter your Email',
+                hintText: 'Enter your Username',
               ),
             ),
           ),

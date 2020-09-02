@@ -48,6 +48,7 @@ class Sponsors extends StatelessWidget
                           Padding(
                             padding: const EdgeInsets.only(top: 15.0, left: 50,right: 50),
                             child: RaisedButton(
+                              onPressed: (){},
                               elevation: 10,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15.0)
@@ -64,6 +65,7 @@ class Sponsors extends StatelessWidget
                           Padding(
                             padding: const EdgeInsets.only(top: 15.0, left: 50,right: 50),
                             child: RaisedButton(
+                              onPressed: (){},
                               elevation: 10,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15.0)
@@ -80,6 +82,7 @@ class Sponsors extends StatelessWidget
                           Padding(
                             padding: const EdgeInsets.only(top: 15.0, left: 50,right: 50, bottom: 20.0),
                             child: RaisedButton(
+                              onPressed: (){},
                               elevation: 10,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15.0)
