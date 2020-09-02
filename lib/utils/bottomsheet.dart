@@ -4,6 +4,7 @@ import 'package:inkpool/Participants/about.dart';
 import 'package:inkpool/Participants/dashboard.dart';
 import 'package:inkpool/Participants/escort.dart';
 import 'package:inkpool/Participants/prizes.dart';
+import 'package:inkpool/Participants/ranking.dart';
 import 'package:inkpool/Participants/schaffenabout.dart';
 import 'package:inkpool/Participants/partners.dart';
 import 'package:inkpool/Participants/sponsors.dart';
@@ -98,7 +99,7 @@ class BottomSheetIP extends StatelessWidget {
                     ),
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => About(),
+                        builder: (context) => Ranking(),
                       ));
                     },
                   ),
