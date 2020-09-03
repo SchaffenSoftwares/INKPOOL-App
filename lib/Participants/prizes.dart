@@ -134,8 +134,9 @@ class Prizes extends StatelessWidget
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.white,
+                                    color: Colors.black,
                                     fontSize: 20,
+                                    fontFamily: 'Sora'
 
                                   ),
                                 ),
@@ -168,8 +169,9 @@ class Prizes extends StatelessWidget
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.white,
+                                      color: Colors.black,
                                       fontSize: 20,
+                                      fontFamily: 'Sora'
 
                                     ),
                                   ),
@@ -202,8 +204,9 @@ class Prizes extends StatelessWidget
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.white,
+                                      color: Colors.black,
                                       fontSize: 20,
+                                      fontFamily: 'Sora'
 
                                     ),
                                   ),
