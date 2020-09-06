@@ -23,7 +23,7 @@ class _CannotSubmitState extends State<CannotSubmit> {
             SizedBox(height: 300,),
             Text
             (
-              'Cannot Submit Now!',
+              'Submitted Successfully!\n\nCannot Submit Again!',
               style: TextStyle
               (
                 fontSize: 20),

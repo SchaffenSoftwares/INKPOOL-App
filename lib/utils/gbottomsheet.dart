@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:inkpool/Guests/gPartners.dart';
 import 'package:inkpool/Guests/gPrizes.dart';
+import 'package:inkpool/Guests/gRanking.dart';
 import 'package:inkpool/Guests/gSchaffenAbout.dart';
 import 'package:inkpool/Guests/gSponsors.dart';
 import 'package:inkpool/Guests/gTimeline.dart';
@@ -80,7 +81,7 @@ class GBottomSheetIP extends StatelessWidget {
                     ),
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Ranking(),
+                        builder: (context) => GRanking(),
                       ));
                     },
                   ),
@@ -158,7 +159,7 @@ class GBottomSheetIP extends StatelessWidget {
                   ),
                   ListTile(
                     title: Text(
-                      "Landing Page",
+                      "Sign Out",
                       style: TextStyle(
                           fontFamily: 'Merriweather',
                           fontSize: 18,

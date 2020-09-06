@@ -176,7 +176,7 @@ Ashutosh - 4*/
                                                   : 'pashutosh1957@gmail.com',
                                       style: TextStyle(
                                           color: Colors.blueGrey[200],
-                                          fontSize: 18.0,
+                                          fontSize: 16.0,
                                           fontWeight: FontWeight.bold,
                                           fontFamily: 'Sora'),
                                     ),
@@ -214,7 +214,7 @@ Ashutosh - 4*/
                                                   : '9598054102',
                                       style: TextStyle(
                                           color: Colors.blueGrey[200],
-                                          fontSize: 18.0,
+                                          fontSize: 16.0,
                                           fontWeight: FontWeight.bold,
                                           fontFamily: 'Sora'),
                                     ),
@@ -263,12 +263,7 @@ Ashutosh - 4*/
                     ),
                   ),
                 ),
-                RaisedButton(
-                  onPressed: () {
-                    getData();
-                  },
-                  child: Text("try"),
-                ),
+                
               ],
             ),
           );
