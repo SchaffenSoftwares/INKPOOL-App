@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:inkpool/services/database.dart';
-import 'package:inkpool/utils/bottomsheet.dart';
+import 'package:inkpool/utils/gbottomsheet.dart';
 
 import '../loading.dart';
 
-class Ranking extends StatefulWidget {
+class GRanking extends StatefulWidget {
   @override
-  _RankingState createState() => _RankingState();
+  _GRankingState createState() => _GRankingState();
 }
 
-class _RankingState extends State<Ranking> {
+class _GRankingState extends State<GRanking> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +26,7 @@ class _RankingState extends State<Ranking> {
                         child: Center(
                             child: Row(
                           children: [
-                            BottomSheetIP(),
+                            GBottomSheetIP(),
                             Padding(
                               padding: const EdgeInsets.only(left: 85.0),
                               child: Text(
@@ -148,5 +148,6 @@ class _RankingState extends State<Ranking> {
                 ),
               );
             }));
+
   }
 }

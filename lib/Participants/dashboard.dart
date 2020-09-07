@@ -250,13 +250,21 @@ class _DashboardState extends State<Dashboard> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 200.0),
+                        padding: const EdgeInsets.only(top: 150.0),
                         child: Text(
-                          "Your Current Line is -\n\n" +
-                              snapshot.data['line'].toString(),
+                          "Your Current Line is -\n\n" 
+                              ,
                           style: TextStyle(fontSize: 20, fontFamily: 'Sora'),
                         ),
                       ),
+                      Container(
+                        padding: EdgeInsets.all(50),
+                        margin: EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.white54),
+                        ),
+                        child: Text(snapshot.data['line'].toString(),style: TextStyle(fontSize: 20, fontFamily: 'Sora'),),
+                      )
                     ],
                   ),
                 ),

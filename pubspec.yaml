@@ -36,6 +36,8 @@ dependencies:
   cloud_firestore: ^0.13.7
   shared_preferences: 
   flutter_spinkit: 
+  http: 
+  url_launcher: 
 
 dev_dependencies:
   flutter_test:
